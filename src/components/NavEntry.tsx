@@ -1,8 +1,10 @@
-export const NavEntry = ({ name }: { name: string }) => {
+export const NavEntry = ({ name, link }: { name: string; link: string }) => {
   return (
-    <h2 className="text-white hover:text-red-600 text-xl p-2 mt-2 ml-4 mb-2">
-      {" "}
+    <a
+      href={link}
+      className="text-gray-300 hover:text-red-500 text-l px-4 py-2"
+    >
       {name}
-    </h2>
+    </a>
   );
 };

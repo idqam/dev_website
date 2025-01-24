@@ -4,7 +4,7 @@ export const NavMain = ({ children }: { children: ReactNode }) => {
   return (
     <div
       id="nav-bar"
-      className="flex gap-x-2 border-2 border-indigo-500 justify-end w-full mt-4  max-h-16 bg-slate-950 pr-10"
+      className="flex gap-x-4 justify-end w-full h-fit  px-6 shadow-3d fixed top-0 z-50 hover:shadow-3d-hover active:shadow-3d-active border-b "
     >
       {children}
     </div>
