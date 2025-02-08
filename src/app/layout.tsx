@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Owen Villareal | Full Stack Developer",
-  description: "Owen Villareal | Full Stack Engineer & Developer",
+  title: "Owen Villareal | Software Engineer",
+  description: "Owen Villareal | Software Engineer",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

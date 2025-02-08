@@ -1,30 +1,51 @@
 import React from "react";
 import SkillManifest from "./SkillCard";
 import { CssIcon } from "@/icons/CssIcon";
-import { HtmlIcon } from "@/icons/HtmlIcon";
-import { NextIcon } from "@/icons/NextIcon";
+
 import { ReactIcon } from "@/icons/ReactIcon";
+import { AWSIcon } from "@/icons/AWSIcon";
+import { TypeScriptIcon } from "@/icons/TypeScriptIcon";
+import { Django } from "@/icons/Django";
+import { Figma } from "@/icons/Figma";
+import { Go } from "@/icons/Go";
+import { HtmlIcon } from "@/icons/HtmlIcon";
+import { JavaIcon } from "@/icons/JavaIcon";
+import { Jest } from "@/icons/Jest";
+import { NextIcon } from "@/icons/NextIcon";
+import { Rust } from "@/icons/Rust";
+import { SpringIcon } from "@/icons/SpringIcon";
+import { Node } from "@/icons/Node";
+import { Postgres } from "@/icons/Postgres";
+import { Tailwind } from "@/icons/Tailwind";
+import { Git } from "@/icons/Git";
+import { Docker } from "@/icons/Docker";
+import { JS } from "@/icons/JS";
 
 const items = [
-  { svg: <HtmlIcon />, title: "HTML" },
+  { svg: <AWSIcon />, title: "AWS" },
   { svg: <CssIcon />, title: "CSS" },
+  { svg: <Django />, title: "Django" },
+  { svg: <TypeScriptIcon />, title: "Typescript" },
+  { svg: <Figma />, title: "Figma" },
+  { svg: <Go />, title: "Go" },
+  { svg: <HtmlIcon />, title: "HTML" },
+  { svg: <JavaIcon />, title: "Java" },
+  { svg: <Jest />, title: "Jest" },
+  { svg: <NextIcon />, title: "NextJS" },
   { svg: <ReactIcon />, title: "React" },
-  { svg: <NextIcon />, title: "Next.js" },
-  { svg: <ReactIcon />, title: "Java" },
-  { svg: <ReactIcon />, title: "Rust" },
-  { svg: <ReactIcon />, title: "Node.js" },
-  { svg: <ReactIcon />, title: "Git" },
-  { svg: <ReactIcon />, title: "Docker" },
-  { svg: <ReactIcon />, title: "Python" },
-  { svg: <ReactIcon />, title: "Lisp" },
-  { svg: <ReactIcon />, title: "Springboot" },
-  { svg: <ReactIcon />, title: "AWS" },
-  { svg: <ReactIcon />, title: "Typescript" },
+  { svg: <Rust />, title: "Rust" },
+  { svg: <SpringIcon />, title: "Springboot" },
+  { svg: <Node />, title: "Node.js" },
+  { svg: <Postgres />, title: "PostgresSQL" },
+  { svg: <Tailwind />, title: "Tailwind" },
+  { svg: <Git />, title: "Git" },
+  { svg: <Docker />, title: "Docker" },
+  { svg: <JS />, title: "Javascript" },
 ];
 
 export const IconList = () => {
   return (
-    <div className="mt-10 fade-in">
+    <div className="mt-10 fade-in mb-20">
       <SkillManifest skills={items} delay={200} />
     </div>
   );

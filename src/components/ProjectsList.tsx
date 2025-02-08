@@ -11,18 +11,16 @@ export const ProjectsList: React.FC = () => {
       liveLink: "https://arbichats.vercel.app/",
       learnMoreLink: "https://github.com/idqam/arbichat",
     },
-    {
-      image: "/assets/test1.png",
-      title: "Project 2",
-      description:
-        "Another amazing project with detailed description goes here.",
-      liveLink: "#",
-      learnMoreLink: "#",
-    },
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
+    <div
+      className={`grid gap-x-6 gap-y-8 ${
+        projects.length === 1
+          ? "grid-cols-1 place-items-center"
+          : "grid-cols-1 md:grid-cols-2 justify-items-center"
+      }`}
+    >
       {projects.map((project, index) => (
         <ProjectCard
           key={index}

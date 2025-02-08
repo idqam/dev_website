@@ -9,7 +9,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ svg, title }) => {
   return (
     <div className="skill-card fade-in">
       <div className="flex items-center justify-center w-16 h-16">{svg}</div>
-      <p className="mt-4 text-center text-sm font-semibold text-white">
+      <p className="mt-4 text-center text-sm font-semibold text-white mb-2">
         {title}
       </p>
     </div>

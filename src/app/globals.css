@@ -3,133 +3,41 @@
 @tailwind utilities;
 
 :root {
-  --background: rgb(15, 15, 15); /* Dark background */
-  --foreground: rgb(255, 255, 255); /* Light text */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: rgb(15, 15, 15);
-    --foreground: rgb(255, 255, 255);
-  }
+  /* Dark background */ /* Light text */
 }
 
 body,
 html {
+  margin: 0;
+  padding: 0;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.skill-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100px;
-  width: 120px;
-  border: double 3px transparent;
-  border-image-slice: 1;
-  border-width: 3px;
-  background-image: linear-gradient(#1a1a1a, #1a1a1a),
-    radial-gradient(circle at top left, #51a2e9, #ff4d5a);
-  border-radius: 10px;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  overflow: hidden;
-}
-
-.skill-card p {
-  margin-top: 8px;
-  color: ivory;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-align: center;
-}
-
-.skill-card svg {
-  width: 40px;
-  height: 40px;
-  fill: white;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+@layer utilities {
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
   }
-  to {
-    opacity: 1;
-    transform: translateX(10px);
+  .animate-blink {
+    animation: blink 0.9s ease-in-out infinite;
   }
-}
-
-@keyframes fadeIn2 {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
   }
-  to {
-    opacity: 1;
-    transform: translateY(10px);
+
+  .animate-loading-bar {
+    animation: loading 0.9s ease infinite;
   }
-}
-
-@keyframes fadeIn3 {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(10px);
-  }
-}
-
-.fade-in {
-  animation: fadeIn3 2s ease-out forwards;
-  opacity: 0;
-}
-
-.fade-in-heading {
-  opacity: 0;
-  animation: fadeIn2 0.8s ease-in forwards;
-}
-
-.fade-in-paragraph {
-  opacity: 0;
-  animation: fadeIn2 1.5s ease-in-out forwards;
-  animation-delay: 0.1s;
-}
-
-.shadow-3d {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  background: linear-gradient(to bottom, #444444, #222222);
-  border: 2px solid #333333;
-  border-radius: 4px;
-}
-
-.shadow-3d-hover {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
-}
-
-.shadow-3d-active {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8),
-    inset 0 -1px 1px rgba(255, 255, 255, 0.2);
-  transform: translateY(1px);
-}
-
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transform: translateZ(0);
-}
-
-.project-card:hover {
-  transform: scale(0.95);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
