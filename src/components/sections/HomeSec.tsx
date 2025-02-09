@@ -15,7 +15,7 @@ export const HomeSec = () => {
       className="min-h-screen bg-black flex  items-center justify-center relative"
     >
       <ScrollRevel>
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-center items-center">
           <Bh1 />
           <div className="text-center z-10 px-4">
             <p className="text-gray-400 text-lg md:text-2xl mb-8 max-w-lg mx-auto">
