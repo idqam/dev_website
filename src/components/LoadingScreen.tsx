@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const welcomes = ["Welcome", "Bienvenue", "Bienvenido"];
+const welcomes = ["Welcome", "Bienvenido"];
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -13,8 +13,8 @@ export const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
     let wordIndex = 0;
     let letterIndex = 0;
     let pauseCounter = 0;
-    const TICK_MS = 100;
-    const PAUSE_TICKS = 10;
+    const TICK_MS = 90;
+    const PAUSE_TICKS = 5;
 
     const interval = setInterval(() => {
       const currentWord = welcomes[wordIndex];
@@ -32,7 +32,7 @@ export const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
             pauseCounter = 0;
           } else {
             clearInterval(interval);
-            setTimeout(() => onComplete(), 100);
+            setTimeout(() => onComplete(), 50);
           }
         }
       }
