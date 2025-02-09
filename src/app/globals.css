@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Dark background */ /* Light text */
-}
-
 body,
 html {
   margin: 0;

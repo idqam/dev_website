@@ -5,6 +5,7 @@ import { MobileMenu } from "@/components/MobileMenu";
 import { NavMain } from "@/components/NavMain";
 import { About } from "@/components/sections/About";
 import { HomeSec } from "@/components/sections/HomeSec";
+import { Projects } from "@/components/sections/Projects";
 import { useState } from "react";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <HomeSec />
         <About />
+        <Projects />
       </div>
     </>
   );
