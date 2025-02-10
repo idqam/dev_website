@@ -26,6 +26,8 @@ export const ContactForm = () => {
     );
     if (res) {
       console.log("success");
+    } else {
+      console.log("error");
     }
   };
   return (

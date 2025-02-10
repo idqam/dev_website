@@ -69,20 +69,20 @@ export const About = () => {
                       {" "}
                       Audible SWE Intern
                     </strong>{" "}
-                    - (2022-2022){" "}
+                    - (May 2022 - August 2022){" "}
                   </li>{" "}
                   <li>
                     <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
-                      Full-stack software engineer Audible
+                      Audible Full-stack Software Engineer
                     </strong>{" "}
-                    - (2023-2024){" "}
+                    - (April 2023- April 2024){" "}
                   </li>{" "}
                   <li>
                     {" "}
                     <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
                       BAF Network Volunteer{" "}
                     </strong>
-                    - 2024
+                    - (June 2024 - November 2024 )
                   </li>{" "}
                 </ul>
               </div>
