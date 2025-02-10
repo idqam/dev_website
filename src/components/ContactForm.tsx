@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const SERVICE_ID = process.env.SERVICE_ID!;
 const TEMPLATE_ID = process.env.TEMPLATE_ID!;
-const API_KEY = process.env.API_KEY_EMAILJS;
+const API_KEY = process.env.API_KEY_EMAILJS!;
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
