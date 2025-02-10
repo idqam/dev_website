@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^3.10.0",
     "@iconify/react": "^5.2.0",
     "@radix-ui/react-label": "^2.1.1",
@@ -16,6 +17,8 @@
     "@svgr/webpack": "^8.1.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "emailjs": "^4.0.3",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.0.3",
     "iconify-icon": "^2.3.0",
     "lucide-react": "^0.474.0",

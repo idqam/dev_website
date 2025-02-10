@@ -42,14 +42,20 @@ export const About = () => {
                 <h3 className="text-xl font-bold mb-4"> Education</h3>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
                   <li>
-                    <strong>B.A. in Computer Science, Math minor</strong> -
-                    Universtiy of Rochester (2019-2025)
+                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
+                      B.A. in Computer Science, Math minor
+                    </strong>{" "}
+                    - Universtiy of Rochester (2019-2025)
                   </li>
                   <li>
-                    <strong> Relevant Coursework</strong>: Data Structures &
-                    Algorithms, Machine Learning, Deep Learning, Logic in AI,
-                    Linear Algebra, Database Systems, Data Mining, Quantum
-                    Computing, Natural Language Processing, Networks & Systems.
+                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
+                      {" "}
+                      Relevant Coursework
+                    </strong>
+                    : Data Structures & Algorithms, Machine Learning, Deep
+                    Learning, Logic in AI, Linear Algebra, Database Systems,
+                    Data Mining, Quantum Computing, Natural Language Processing,
+                    Networks & Systems.
                   </li>
                 </ul>
               </div>
@@ -59,13 +65,25 @@ export const About = () => {
                   {" "}
                   <li>
                     {" "}
-                    <strong> Audible SWE Intern</strong> - (2022-2022){" "}
+                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
+                      {" "}
+                      Audible SWE Intern
+                    </strong>{" "}
+                    - (2022-2022){" "}
                   </li>{" "}
                   <li>
-                    <strong>Full-stack software engineer Audible</strong> -
-                    (2023-2024){" "}
+                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
+                      Full-stack software engineer Audible
+                    </strong>{" "}
+                    - (2023-2024){" "}
                   </li>{" "}
-                  <li> BAF Network Volunteer - 2024</li>{" "}
+                  <li>
+                    {" "}
+                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
+                      BAF Network Volunteer{" "}
+                    </strong>
+                    - 2024
+                  </li>{" "}
                 </ul>
               </div>
             </div>

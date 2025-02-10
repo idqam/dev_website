@@ -1,5 +1,6 @@
 "use client";
 
+import { ContactForm } from "@/components/ContactForm";
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { MobileMenu } from "@/components/MobileMenu";
 import { NavMain } from "@/components/NavMain";
@@ -25,6 +26,7 @@ export default function Home() {
         <HomeSec />
         <About />
         <Projects />
+        <ContactForm />
       </div>
     </>
   );

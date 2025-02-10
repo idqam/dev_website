@@ -48,11 +48,13 @@ export const NavMain = ({ menuOpen, setMenuOpen }: NavMainProps) => {
             >
               Contact
             </a>
+
             <a
-              href="#blog"
-              className="text-gray-300 hover:text-blue-300 transition-colors"
+              href="https://github.com/idqam"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Blog
+              Github
             </a>
           </div>
         </div>
