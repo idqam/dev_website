@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Owen Villareal | Software Engineer",
   description: "Owen Villareal | Software Engineer",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.ico",
   },
 };
 
