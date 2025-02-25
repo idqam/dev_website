@@ -45,7 +45,7 @@ export const About = () => {
                     <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
                       B.A. in Computer Science, Math minor
                     </strong>{" "}
-                    - Universtiy of Rochester (2019-2025)
+                    - Universtiy of Rochester (2019-2024)
                   </li>
                   <li>
                     <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
