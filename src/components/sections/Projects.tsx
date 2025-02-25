@@ -65,7 +65,11 @@ export const Projects = () => {
                 for constructed languages. Users can define phonology, word
                 order, noun declensions, verb conjugations, and more. Built with
                 Next.js, React, Python (FastAPI), and TailwindCSS for a seamless
-                and interactive experience.
+                and interactive experience. Click on &quot;Get word
+                examples&quot; for an automatic generation without
+                specifications and then click on the &quot;words&quot; tab. Be
+                aware the backend is hosted on a free tier, to there is a 50
+                second lag but it will display the api response. 
               </p>
               <div>
                 {["Next.js", "React", "FastAPI", "TailwindCSS", "Python"].map(
