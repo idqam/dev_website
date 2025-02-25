@@ -1,13 +1,12 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import emailjs from "emailjs-com";
 
 import { ScrollRevel } from "./ScrollRevel";
 import { useState } from "react";
 
-const SERVICE_ID = process.env.SERVICE_ID!;
-const TEMPLATE_ID = process.env.TEMPLATE_ID!;
-const PUBLIC_KEY = process.env.API_KEY_EMAILJS!;
+const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID!;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID!;
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY!;
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -16,23 +15,28 @@ export const ContactForm = () => {
     message: "",
   });
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const res = await emailjs.sendForm(
-      SERVICE_ID,
-      TEMPLATE_ID,
-      e.target,
-      PUBLIC_KEY
-    );
-    if (res) {
-      console.log("success");
-    } else {
-      console.log("error");
+    try {
+      const res = await emailjs.sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        e.target as HTMLFormElement,
+        PUBLIC_KEY
+      );
+      console.log("Message sent successfully:", res);
+    } catch (error) {
+      console.error("Failed to send message:", error);
+      alert(`Error: ${error}`);
     }
   };
+
   return (
     <ScrollRevel>
-      <section className="min-h-screen m-0 flex items-center justify-center py-20">
+      <section
+        id="contact"
+        className="min-h-screen m-0 flex items-center justify-center py-20"
+      >
         <div className="px-4 w-screen flex flex-col items-center justify-center">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-300 to-red-300 via-purple-300  bg-clip-text text-transparent text-center ">
             Get In Touch
