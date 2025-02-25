@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const SERVICE_ID = process.env.SERVICE_ID!;
 const TEMPLATE_ID = process.env.TEMPLATE_ID!;
-const API_KEY = process.env.API_KEY_EMAILJS!;
+const PUBLIC_KEY = process.env.API_KEY_EMAILJS!;
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +22,7 @@ export const ContactForm = () => {
       SERVICE_ID,
       TEMPLATE_ID,
       e.target,
-      API_KEY
+      PUBLIC_KEY
     );
     if (res) {
       console.log("success");
