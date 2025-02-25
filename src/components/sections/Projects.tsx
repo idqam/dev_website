@@ -53,7 +53,7 @@ export const Projects = () => {
             <div className="p-4 space-y-4 rounded-xl border-2 border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
               <div className="text-transparent border-b-2 py-2 bg-gradient-to-r from-emerald-300 to-amber-300 via-white bg-clip-text">
                 <a
-                  href="https://github.com/YOUR_GITHUB_REPO"
+                  href="https://github.com/idqam/conlangGenFrontEnd"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
