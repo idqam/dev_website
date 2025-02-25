@@ -80,9 +80,9 @@ export const About = () => {
                   <li>
                     {" "}
                     <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
-                      BAF Network Volunteer{" "}
+                      Inversiones Owen S{" "}
                     </strong>
-                    - (June 2024 - November 2024 )
+                    - (June 2024 - December 2024 )
                   </li>{" "}
                 </ul>
               </div>

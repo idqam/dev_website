@@ -15,7 +15,7 @@ export const NavMain = ({ menuOpen, setMenuOpen }: NavMainProps) => {
     >
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <a className="font-mono text-xl font-bold ">Owen Villareal</a>
+          <a className="text-xl font-bold ">Owen Villareal</a>
           <div
             id="mobile"
             className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
