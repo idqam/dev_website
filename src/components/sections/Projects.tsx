@@ -53,7 +53,7 @@ export const Projects = () => {
             <div className="p-4 space-y-4 rounded-xl border-2 border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
               <div className="text-transparent border-b-2 py-2 bg-gradient-to-r from-emerald-300 to-amber-300 via-white bg-clip-text">
                 <a
-                  href="https://github.com/idqam/conlangGenFrontEnd"
+                  href="https://conlang.lat"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -81,12 +81,20 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  href="https://conlang.lat"
+                  href="https://github.com/idqam/conlangGenFrontEnd"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 hover:text-blue-300 transition-colors my-4"
                 >
-                  View Project {">"}
+                  View Frontend Code {">"}
+                </a>
+                <a
+                  href="https://github.com/idqam/conlangGenBackend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:text-blue-300 transition-colors my-4"
+                >
+                  View Backend Code {">"}
                 </a>
               </div>
             </div>
