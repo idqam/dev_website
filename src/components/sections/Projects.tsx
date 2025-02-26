@@ -68,8 +68,9 @@ export const Projects = () => {
                 and interactive experience. Click on &quot;Get word
                 examples&quot; for an automatic generation without
                 specifications and then click on the &quot;words&quot; tab. Be
-                aware the backend is hosted on a free tier, to there is a 50
-                second lag but it will display the api response. 
+                aware the backend is hosted on a free tier, so there is a 50
+                second lag but it will display the api response. Feature to be
+                implemented is grammar generation
               </p>
               <div>
                 {["Next.js", "React", "FastAPI", "TailwindCSS", "Python"].map(
