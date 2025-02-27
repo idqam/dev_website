@@ -12,6 +12,7 @@ export const About = () => {
     "Python",
     "Go",
     "Java",
+    "FastAPI",
   ];
   const generalSkills = ["Jest", "React Testing Library", "CI/CD", "Git"];
 
