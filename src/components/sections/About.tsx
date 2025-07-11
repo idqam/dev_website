@@ -63,25 +63,33 @@ export const About = () => {
       <h1 className="text-3xl md:text-4xl font-bold">Who am I?</h1>
 
       <p className="max-w-3xl px-4 text-center leading-relaxed">
-        I&apos;m a full-stack software engineer graduated from the University of
-        Rochester as a computer science major. I&apos;m passionate about turning
-        complex ideas into elegant, scalable products. I specialize in building
-        and shipping modern web apps with <u>React</u>, <u>TypeScript</u>, and
-        backend systems in
-        <span className="text-red-500"> Python</span>,{" "}
-        <span className="text-blue-500"> Go</span>, or{" "}
-        <span className="text-green-500"> Java</span>.
+        I&apos;m a full-stack software engineer and recent CS graduate from the
+        University of Rochester. I focus on building thoughtful tools and
+        systems — often backend-heavy — that blend clean architecture with
+        real-world impact. I care deeply about solving actual problems with
+        well-structured code.
       </p>
 
       <p className="max-w-3xl px-4 text-center leading-relaxed">
-        My work blends clean architecture with real-world impact — whether
-        that’s crafting user-focused interfaces, deploying microservices, or
-        integrating AI to power smarter, more intuitive experiences. From MVP to
-        production, I move fast, stay lean, and care deeply about code quality,
-        performance, and shipping things that actually solve problems.
+        My experience includes an internship along with a ~year of full-time SWE
+        at <u>Audible</u> and building several full-stack MVPs independently. I
+        work comfortably across the stack, using technologies like <u>React</u>,{" "}
+        <u>TypeScript</u>, <span className="text-red-500">Python</span>,{" "}
+        <span className="text-blue-500">Go</span>, and{" "}
+        <span className="text-green-500">Java</span>, along with modern tools
+        like Supabase, Firebase, and OpenAI APIs.
       </p>
 
-      <span className="">-------------------</span>
+      <p className="max-w-3xl px-4 text-center leading-relaxed">
+        I’m especially interested in backend systems, API design, and the
+        intersection of language and computation. I enjoy thinking about how
+        systems can be expressive, efficient, and human-aware. Outside of tech,
+        I spend time reading about aesthetics and cybernetics 📖, skating 🛹
+        when I can, and building Magic: The Gathering decks that occasionally
+        win 🎴.
+      </p>
+
+      <span className="mt-2">-------------------</span>
 
       <div className="border-2 rounded-xl p-4 w-full max-w-4xl bg-white space-y-4">
         <div className="text-center">

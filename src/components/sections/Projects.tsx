@@ -4,6 +4,7 @@ import React from "react";
 const projects = [
   {
     name: "Conlang Generator",
+    image: "",
     tech: ["React", "Next.js", "TypeScript", "Python", "FastAPI", "Supabase"],
     description:
       "Design and generate constructed languages (conlangs) using AI-assisted tools and NLP techniques.",
@@ -15,15 +16,12 @@ const projects = [
       "AI-assisted vocabulary creation",
     ],
     status: "Deployed",
-    repo: "TBP",
+    repo: "https://github.com/idqam/conlangGenFrontEnd",
     demo: "https://conlang.lat",
-    deployments: {
-      frontend: "https://conlang.lat",
-      backend: "TBP",
-    },
   },
   {
     name: "URL Shortener",
+    image: "", // will fallback to placeholder
     tech: ["Go", "React", "Next.js", "Supabase"],
     description:
       "Build, track, and analyze shortened URLs with real-time database updates and backend monitoring.",
@@ -35,15 +33,12 @@ const projects = [
       "Link expiration & management",
     ],
     status: "In Progress",
-    repo: "TBP",
-    demo: "TBP",
-    deployments: {
-      frontend: "TBP",
-      backend: "TBP",
-    },
+    repo: "",
+    demo: "",
   },
   {
     name: "Phases App",
+    image: "", // will fallback to placeholder
     tech: ["React Native", "Firebase", "Express.js", "OpenAI"],
     description:
       "A second brain and supportive assistant app for busy moms, powered by AI.",
@@ -55,12 +50,8 @@ const projects = [
       "Personalized daily phase planning",
     ],
     status: "In Progress",
-    repo: "TBP",
-    demo: "TBP",
-    deployments: {
-      frontend: "TBP",
-      backend: "TBP",
-    },
+    repo: "",
+    demo: "",
   },
 ];
 
