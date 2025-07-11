@@ -1,22 +1,27 @@
-type SkillPillsProps = {
+// SkillPills.tsx
+import { ReactNode } from "react";
+
+interface SkillPillsProps {
   skills: string[];
-  name: string;
-};
-export const SkillPills = ({ name, skills }: SkillPillsProps) => {
+  children?: ReactNode;
+}
+
+export const SkillPills = ({ skills, children }: SkillPillsProps) => {
   return (
-    <div className="rounded-xl p-6 ">
-      <h3 className="text-xl font-bold mb-4"> {name} </h3>
-      <div className="flex flex-wrap gap-2">
-        {skills.map((skill, key) => (
-          <span
-            className=" bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition "
-            key={key}
-          >
-            {" "}
-            {skill}{" "}
+    <div className="flex flex-wrap gap-2">
+      {skills.map((skill) => (
+        <div
+          key={skill}
+          className="group relative rounded-full p-[2px] transition-transform duration-300 hover:-translate-y-0.5"
+        >
+          <div className="absolute inset-0 z-0 rounded-full bg-white group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:via-yellow-400 group-hover:to-green-500 transition-all duration-300" />
+
+          <span className="relative z-10 rounded-full bg-white px-4 py-1 text-sm font-medium text-gray-800">
+            {skill}
           </span>
-        ))}
-      </div>
+        </div>
+      ))}
+      {children}
     </div>
   );
 };

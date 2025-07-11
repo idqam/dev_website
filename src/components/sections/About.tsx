@@ -1,96 +1,119 @@
-import { ScrollRevel } from "../ScrollRevel";
 import { SkillPills } from "../SkillPills";
+import { useState } from "react";
+
+const skillSections = [
+  {
+    title: "Frontend Development",
+    skills: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "JavaScript",
+      "Figma",
+    ],
+  },
+  {
+    title: "Backend & Infrastructure",
+    skills: [
+      "Python",
+      "Go",
+      "Java",
+      "Spring Boot",
+      "FastAPI",
+      "PostgreSQL",
+      "Docker",
+      "AWS",
+      "CI/CD",
+    ],
+  },
+  {
+    title: "AI & ML Integration",
+    skills: ["OpenAI API", "Hugging Face", "LangChain", "AI Integration"],
+  },
+  {
+    title: "Testing & Tooling",
+    skills: [
+      "Jest",
+      "React Testing Library",
+      "Git",
+      "GitHub Actions",
+      "ESLint",
+      "Prettier",
+    ],
+  },
+  {
+    title: "Architecture & Workflow",
+    skills: ["System Design", "Agile", "Scrum", "Code Reviews"],
+  },
+];
 
 export const About = () => {
-  const frontendSkills = ["React", "Next.js", "TailwindCSS", "TS/JS", "Figma"];
-  const backendSkills = [
-    "Node.js",
-    "Postgres",
-    "Docker",
-    "AWS",
-    "Springboot",
-    "Python",
-    "Go",
-    "Java",
-    "FastAPI",
-  ];
-  const generalSkills = ["Jest", "React Testing Library", "CI/CD", "Git"];
+  const [index, setIndex] = useState(0);
+  const { title, skills } = skillSections[index];
+
+  const next = () => setIndex((prev) => (prev + 1) % skillSections.length);
+  const prev = () =>
+    setIndex(
+      (prev: number) => (prev - 1 + skillSections.length) % skillSections.length
+    );
 
   return (
-    <section
-      id="about"
-      className="min-h-screen flex items-center justify-center py-20"
-    >
-      <ScrollRevel>
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-sm sm:text-4xl font-bold mb-8 bg-gradient-to-r from-blue-300 to-red-300 via-purple-300  bg-clip-text text-transparent text-center ">
-            About me
-          </h2>
-          <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-            <p className="text-gray-300 mb-6">
-              Computer science graduate from the University of Rochester in New
-              York with a minor in Math, previously at Audible, currently
-              building, learning, growing.
-            </p>
-            <div className="grid grid-cols-2 overflow-auto ">
-              <SkillPills name="Frontend" skills={frontendSkills} />
-              <SkillPills name="Backend" skills={backendSkills} />
-              <SkillPills name="General" skills={generalSkills} />
-            </div>
+    <div className="flex flex-col items-center justify-center gap-6 text-gray-800">
+      <h1 className="text-3xl md:text-4xl font-bold">Who am I?</h1>
 
-            <div className="grid grid-cols-2 mg:grid-cols-3 gap-6 mt-8 ">
-              <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Education</h3>
-                <ul className="list-disc list-inside text-gray-300 space-y-2">
-                  <li>
-                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
-                      B.A. in Computer Science, Math minor
-                    </strong>{" "}
-                    - Universtiy of Rochester (August 2019 - December 2024)
-                  </li>
-                  <li>
-                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
-                      {" "}
-                      Relevant Coursework
-                    </strong>
-                    : Data Structures & Algorithms, Machine Learning, Deep
-                    Learning, Logic in AI, Linear Algebra, Database Systems,
-                    Data Mining, Quantum Computing, Natural Language Processing,
-                    Networks & Systems.
-                  </li>
-                </ul>
-              </div>
-              <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Work Experience</h3>
-                <ul className="list-disc list-inside">
-                  {" "}
-                  <li>
-                    {" "}
-                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
-                      {" "}
-                      Audible SWE Intern
-                    </strong>{" "}
-                    - (May 2022 - August 2022){" "}
-                  </li>{" "}
-                  <li>
-                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
-                      Audible Full-stack Software Engineer
-                    </strong>{" "}
-                    - (April 2023- April 2024){" "}
-                  </li>{" "}
-                  <li>
-                    {" "}
-                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-pink-200 to-cyan-200">
-                      Inversiones Owen S{" "}
-                    </strong>
-                    - (June 2024 - December 2024 )
-                  </li>{" "}
-                </ul>
-              </div>
-            </div>
-          </div>
+      <p className="max-w-3xl px-4 text-center leading-relaxed">
+        I&apos;m a full-stack software engineer graduated from the University of
+        Rochester as a computer science major. I&apos;m passionate about turning
+        complex ideas into elegant, scalable products. I specialize in building
+        and shipping modern web apps with <u>React</u>, <u>TypeScript</u>, and
+        backend systems in
+        <span className="text-red-500"> Python</span>,{" "}
+        <span className="text-blue-500"> Go</span>, or{" "}
+        <span className="text-green-500"> Java</span>.
+      </p>
+
+      <p className="max-w-3xl px-4 text-center leading-relaxed">
+        My work blends clean architecture with real-world impact — whether
+        that’s crafting user-focused interfaces, deploying microservices, or
+        integrating AI to power smarter, more intuitive experiences. From MVP to
+        production, I move fast, stay lean, and care deeply about code quality,
+        performance, and shipping things that actually solve problems.
+      </p>
+
+      <span className="">-------------------</span>
+
+      <div className="border-2 rounded-xl p-4 w-full max-w-4xl bg-white space-y-4">
+        <div className="text-center">
+          <h2 className="text-xl md:text-2xl font-semibold mb-2">{title}</h2>
+          <SkillPills skills={skills} />
         </div>
-      </ScrollRevel>
-    </section>
+
+        <div className="flex justify-between items-center">
+          <button
+            onClick={prev}
+            className="text-blue-500 hover:text-blue-700 transition font-semibold"
+          >
+            ← Prev
+          </button>
+          <div className="flex gap-1">
+            {skillSections.map((_, i) => (
+              <span
+                key={i}
+                className={`w-2 h-2 rounded-full ${
+                  i === index ? "bg-blue-500" : "bg-gray-300"
+                }`}
+              />
+            ))}
+          </div>
+          <button
+            onClick={next}
+            className="text-blue-500 hover:text-blue-700 transition font-semibold"
+          >
+            Next →
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
