@@ -1,31 +1,66 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
-import { ScrollRevel } from "../ScrollRevel";
 
 const projects = [
   {
     name: "Conlang Generator",
-    tech: ["React", "Python", "Supabase", "FastAPI", "Typescript", "NextJS"],
-    description: "Create and generate conlangs using AI",
-    keySkills: "NLP, AI integration, Linguistics",
+    tech: ["React", "Next.js", "TypeScript", "Python", "FastAPI", "Supabase"],
+    description:
+      "Design and generate constructed languages (conlangs) using AI-assisted tools and NLP techniques.",
+    keySkills:
+      "Natural Language Processing, AI integration, Linguistic modeling",
+    features: [
+      "Custom language generation",
+      "Grammar & phonology modeling",
+      "AI-assisted vocabulary creation",
+    ],
+    status: "Deployed",
     repo: "TBP",
     demo: "https://conlang.lat",
+    deployments: {
+      frontend: "https://conlang.lat",
+      backend: "TBP",
+    },
   },
   {
-    name: "UrlShortener",
-    tech: ["React", "Go", "NextJS", "Supabase"],
-    description: "Create, track, and analyse short urls",
-    keySkills: "full-stack, backend focused, real-time DB, produt readyness",
-    repo: "TBP",
-    demo: "TBP",
-  },
-  {
-    name: "phasesApp",
-    tech: ["React Native", "Firebase", "ExpressJS", "OpenAI"],
-    description: "Second brain and friend for busy moms",
+    name: "URL Shortener",
+    tech: ["Go", "React", "Next.js", "Supabase"],
+    description:
+      "Build, track, and analyze shortened URLs with real-time database updates and backend monitoring.",
     keySkills:
-      "User-centric building, product-driven design, mobile development, Ai integration",
+      "Full-stack engineering, backend architecture, real-time databases, production-readiness",
+    features: [
+      "URL shortening with custom slugs",
+      "Click tracking & analytics",
+      "Link expiration & management",
+    ],
+    status: "In Progress",
     repo: "TBP",
     demo: "TBP",
+    deployments: {
+      frontend: "TBP",
+      backend: "TBP",
+    },
+  },
+  {
+    name: "Phases App",
+    tech: ["React Native", "Firebase", "Express.js", "OpenAI"],
+    description:
+      "A second brain and supportive assistant app for busy moms, powered by AI.",
+    keySkills:
+      "Mobile development, AI integration, user-centric design, product thinking",
+    features: [
+      "Task tracking and reminders",
+      "Conversational AI assistant",
+      "Personalized daily phase planning",
+    ],
+    status: "In Progress",
+    repo: "TBP",
+    demo: "TBP",
+    deployments: {
+      frontend: "TBP",
+      backend: "TBP",
+    },
   },
 ];
 
