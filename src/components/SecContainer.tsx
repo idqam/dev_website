@@ -1,13 +1,10 @@
 import { ReactNode } from "react";
 
-export const SecContainer = ({ children }: { children: ReactNode }) => {
-  return (
-    <div className="group relative rounded-2xl p-[3px] transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl hover-animate-border">
-      <div className="absolute inset-0 z-0 rounded-2xl bg-white group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:via-yellow-500 group-hover:to-purple-500 transition-all duration-300" />
-
-      <div className="relative z-10 rounded-[calc(1rem-3px)] bg-white p-6">
-        {children}
-      </div>
+// components/SecContainer.tsx
+export const SecContainer = ({ children }: { children: ReactNode }) => (
+  <main className="min-h-screen w-full flex items-center justify-center px-4 py-12">
+    <div className="bg-slate-900 text-white rounded-xl shadow-lg max-w-5xl w-full p-8 space-y-8">
+      {children}
     </div>
-  );
-};
+  </main>
+);

@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const projects = [
   {
@@ -21,7 +21,7 @@ const projects = [
   },
   {
     name: "URL Shortener",
-    image: "", // will fallback to placeholder
+    image: "",
     tech: ["Go", "React", "Next.js", "Supabase"],
     description:
       "Build, track, and analyze shortened URLs with real-time database updates and backend monitoring.",
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     name: "Phases App",
-    image: "", // will fallback to placeholder
+    image: "",
     tech: ["React Native", "Firebase", "Express.js", "OpenAI"],
     description:
       "A second brain and supportive assistant app for busy moms, powered by AI.",
@@ -55,114 +55,140 @@ const projects = [
   },
 ];
 
-export const Projects = () => {
-  return <></>;
-};
-// export const Projects = () => {
-//   return (
-//     <section
-//       id="projects"
-//       className="min-h-screen flex items-center justify-center py-20"
-//     >
-//       <ScrollRevel>
-//         <div className="max-w-5xl mx-auto px-4">
-//           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-300 to-red-300 via-purple-300 bg-clip-text text-transparent text-center">
-//             Recent Projects
-//           </h2>
-//           <div className="grid grid-cols-2 md:grid-cols-1 gap-6">
-//             {/* Arbichat Project */}
-//             <div className="p-4 space-y-4 rounded-xl border-2 border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
-//               <div className="text-transparent border-b-2 py-2 bg-gradient-to-r from-emerald-300 to-amber-300 via-white bg-clip-text">
-//                 <a
-//                   href="https://github.com/idqam/arbichat"
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                 >
-//                   Arbichat
-//                 </a>
-//               </div>
-//               <p>RAG chatbot for chatting about emergent tech.</p>
-//               <div>
-//                 {["React", "NextJS", "TailwindCSS", "Upstash"].map(
-//                   (tech, key) => (
-//                     <span
-//                       className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all"
-//                       key={key}
-//                     >
-//                       {tech}
-//                     </span>
-//                   )
-//                 )}
-//               </div>
-//               <div className="flex justify-between items-center">
-//                 <a
-//                   href="https://arbichats.vercel.app/"
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                   className="text-blue-500 hover:text-blue-300 transition-colors my-4"
-//                 >
-//                   View Project {">"}
-//                 </a>
-//               </div>
-//             </div>
+const currentProjects = projects.filter((p) => p.status === "In Progress");
+const pastProjects = projects.filter((p) => p.status === "Deployed");
 
-//             {/* Conlang Generator Project */}
-//             <div className="p-4 space-y-4 rounded-xl border-2 border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
-//               <div className="text-transparent border-b-2 py-2 bg-gradient-to-r from-emerald-300 to-amber-300 via-white bg-clip-text">
-//                 <a
-//                   href="https://conlang.lat"
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                 >
-//                   Conlang Generator
-//                 </a>
-//               </div>
-//               <p>
-//                 A tool for creating structured, naturalistic grammars and words
-//                 for constructed languages. Users can define phonology, word
-//                 order, noun declensions, verb conjugations, and more. Built with
-//                 Next.js, React, Python (FastAPI), and TailwindCSS for a seamless
-//                 and interactive experience. Click on &quot;Get word
-//                 examples&quot; for an automatic generation without
-//                 specifications and then click on the &quot;words&quot; tab. Be
-//                 aware the backend is hosted on a free tier, so there is a 50
-//                 second lag but it will display the api response. Feature to be
-//                 implemented is grammar generation
-//               </p>
-//               <div>
-//                 {["Next.js", "React", "FastAPI", "TailwindCSS", "Python"].map(
-//                   (tech, key) => (
-//                     <span
-//                       className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all"
-//                       key={key}
-//                     >
-//                       {tech}
-//                     </span>
-//                   )
-//                 )}
-//               </div>
-//               <div className="flex justify-between items-center">
-//                 <a
-//                   href="https://github.com/idqam/conlangGenFrontEnd"
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                   className="text-blue-500 hover:text-blue-300 transition-colors my-4"
-//                 >
-//                   View Frontend Code {">"}
-//                 </a>
-//                 <a
-//                   href="https://github.com/idqam/conlangGenBackend"
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                   className="text-blue-500 hover:text-blue-300 transition-colors my-4"
-//                 >
-//                   View Backend Code {">"}
-//                 </a>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </ScrollRevel>
-//     </section>
-//   );
-// };
+const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => (
+  <div className="border-2 p-6 rounded-xl bg-white text-gray-800 w-full max-w-3xl space-y-4 shadow-md">
+    <div className="flex justify-center">
+      <h3 className="text-2xl font-semibold">{project.name}</h3>
+    </div>
+    <p className="text-sm text-gray-700 italic">{project.keySkills}</p>
+    <p>{project.description}</p>
+    <ul className="list-disc list-inside text-sm text-gray-600">
+      {project.features.map((f, i) => (
+        <li key={i}>{f}</li>
+      ))}
+    </ul>
+    <div className="flex flex-wrap gap-2">
+      {project.tech.map((tech, i) => (
+        <span
+          key={i}
+          className="bg-blue-500/10 text-blue-600 px-3 py-1 text-sm rounded-full"
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
+    <div className="flex gap-4">
+      {project.repo && (
+        <a
+          href={project.repo}
+          target="_blank"
+          className="text-blue-500 hover:underline"
+        >
+          GitHub
+        </a>
+      )}
+      {project.demo && (
+        <a
+          href={project.demo}
+          target="_blank"
+          className="text-green-600 hover:underline"
+        >
+          Live Demo
+        </a>
+      )}
+    </div>
+  </div>
+);
+
+export const Projects = () => {
+  const [currIndex, setCurrIndex] = useState(0);
+  const [pastIndex, setPastIndex] = useState(0);
+
+  const cycle = (dir: "next" | "prev", type: "current" | "past") => {
+    if (type === "current") {
+      setCurrIndex((prev) =>
+        dir === "next"
+          ? (prev + 1) % currentProjects.length
+          : (prev - 1 + currentProjects.length) % currentProjects.length
+      );
+    } else {
+      setPastIndex((prev) =>
+        dir === "next"
+          ? (prev + 1) % pastProjects.length
+          : (prev - 1 + pastProjects.length) % pastProjects.length
+      );
+    }
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center gap-2 text-gray-800">
+      {/* Current Projects */}
+      {currentProjects.length > 0 && (
+        <div className="w-full flex flex-col items-center gap-4">
+          <h2 className="text-xl md:text-2xl font-semibold">
+            Current Projects
+          </h2>
+          <ProjectCard project={currentProjects[currIndex]} />
+          <div className="flex justify-between items-center w-full max-w-3xl px-4">
+            <button
+              onClick={() => cycle("prev", "current")}
+              className="text-blue-500 hover:text-blue-700 font-medium"
+            >
+              ← Prev
+            </button>
+            <div className="flex gap-2">
+              {currentProjects.map((_, i) => (
+                <span
+                  key={i}
+                  className={`w-2 h-2 rounded-full ${
+                    i === currIndex ? "bg-blue-500" : "bg-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={() => cycle("next", "current")}
+              className="text-blue-500 hover:text-blue-700 font-medium"
+            >
+              Next →
+            </button>
+          </div>
+        </div>
+      )}
+
+      {pastProjects.length > 0 && (
+        <div className="w-full flex flex-col items-center gap-4 mt-10">
+          <h2 className="text-xl md:text-2xl font-semibold">Past Projects</h2>
+          <ProjectCard project={pastProjects[pastIndex]} />
+          <div className="flex justify-between items-center w-full max-w-3xl px-4">
+            <button
+              onClick={() => cycle("prev", "past")}
+              className="text-blue-500 hover:text-blue-700 font-medium"
+            >
+              ← Prev
+            </button>
+            <div className="flex gap-2">
+              {pastProjects.map((_, i) => (
+                <span
+                  key={i}
+                  className={`w-2 h-2 rounded-full ${
+                    i === pastIndex ? "bg-blue-500" : "bg-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={() => cycle("next", "past")}
+              className="text-blue-500 hover:text-blue-700 font-medium"
+            >
+              Next →
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};

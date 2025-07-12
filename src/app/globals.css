@@ -9,7 +9,12 @@ html {
   color: var(--foreground);
   background: var(--background);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+
 }
+
 
 @layer utilities {
   @keyframes blink {
