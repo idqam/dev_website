@@ -35,8 +35,12 @@ const badgeStyles = {
 export const Projectsme = () => {
   return (
     <section className="mx-auto max-w-5xl px-4 py-16">
-      <div className="mb-10 text-center">
-        <h2 className="text-3xl font-bold">Things I’ve built.</h2>
+      <div className="mb-10 flex flex-col items-start md:items-center gap-y-4 text-left md:text-center">
+        <h2 className="text-5xl font-bold">Things I’ve built</h2>
+        <p className="max-w-xl text-base text-zinc-400">
+          Most of the projects here were created to explore new technologies,
+          sharpen existing skills, and occasionally monetize the work.
+        </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
