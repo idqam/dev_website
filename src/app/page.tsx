@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useEffect, useState } from "react";
@@ -16,23 +17,23 @@ export default function Home() {
     }
   }, []);
 
-  const handleComplete = () => {
-    setIsLoaded(true);
-    sessionStorage.setItem("alreadyVisited", "true");
-  };
+  // const handleComplete = () => {
+  //   setIsLoaded(true);
+  //   sessionStorage.setItem("alreadyVisited", "true");
+  // };
 
   return (
     <>
-      {!isLoaded && <LoadingScreen onComplete={handleComplete} />}
+      {/* {!isLoaded && <LoadingScreen onComplete={handleComplete} />}
       <div
         className={`min-h-screen transition-opacity duration-700 ${
           isLoaded ? "opacity-100" : "opacity-0"
         }  text-white`}
-      >
-        <SecContainer>
-          <Hero />
-        </SecContainer>
-      </div>
+      > */}
+      <SecContainer>
+        <Hero />
+      </SecContainer>
+      {/* </div> */}
     </>
   );
 }
