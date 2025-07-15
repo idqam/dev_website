@@ -45,39 +45,39 @@ export const Aboutme = () => {
         <div className="space-y-1">
           <p className="font-semibold">Main Skills:</p>
           <ul className="list-disc list-inside text-m text-zinc-300 ">
-            <li className="">
-              <p className="hover:text-red-300  hover:underline m-0">
+            <li className="m-0 ">
+              <p className="hover:text-red-300  hover:underline inline">
                 Full-Stack Web Development (Next.js, React, Node.js, FastAPI,
                 Go, Python, Java)
               </p>
             </li>
             <li className="">
-              <p className="hover:text-red-300  hover:underline m-0">
+              <p className="hover:text-red-300  hover:underline inline">
                 Tools: Git, CI/CD, AWS ecosystem, Docker
               </p>
             </li>
             <li className="">
-              <p className="hover:text-red-300  hover:underline m-0">
+              <p className="hover:text-red-300  hover:underline inline">
                 TypeScript, Tailwind CSS, PostgreSQL
               </p>
             </li>
             <li className="">
-              <p className="hover:text-red-300  hover:underline m-0">
+              <p className="hover:text-red-300  hover:underline inline">
                 AI Tooling: OpenAI, LangChain, Vercel AI SDK
               </p>
             </li>
             <li className=" ">
-              <p className="hover:text-red-300  hover:underline m-0">
+              <p className="hover:text-red-300  hover:underline inline">
                 Clean Architecture, Testing (Jest, RTL), Agile Development
               </p>
             </li>
             <li className="">
-              <p className="hover:text-red-300  hover:underline m-0">
+              <p className="hover:text-red-300  hover:underline inline">
                 Writing, Documentation, and Developer Experience
               </p>
             </li>
             <li className=" ">
-              <p className="hover:text-red-300  hover:underline m-0">
+              <p className="hover:text-red-300  hover:underline inline">
                 English (Native), Spanish (Native), French (Professional)
               </p>
             </li>
@@ -100,7 +100,7 @@ export const Aboutme = () => {
         <div className="space-y-2 text-sm text-zinc-300">
           <p>
             <a
-              href="https://github.com/villarealowen"
+              href="https://github.com/idqam"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
@@ -124,6 +124,16 @@ export const Aboutme = () => {
               className="hover:underline"
             >
               villarealowen1@gmail.com
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://github.com/idqam"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              My resume
             </a>
           </p>
         </div>
