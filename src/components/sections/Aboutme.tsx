@@ -45,39 +45,39 @@ export const Aboutme = () => {
         <div className="space-y-1">
           <p className="font-semibold">Main Skills:</p>
           <ul className="list-disc list-inside text-m text-zinc-300 ">
-            <li className="hover:text-red-300">
-              <p className="hover:underline">
+            <li className="">
+              <p className="hover:text-red-300  hover:underline m-0">
                 Full-Stack Web Development (Next.js, React, Node.js, FastAPI,
                 Go, Python, Java)
               </p>
             </li>
-            <li className="hover:text-red-300">
-              <p className="hover:underline">
+            <li className="">
+              <p className="hover:text-red-300  hover:underline m-0">
                 Tools: Git, CI/CD, AWS ecosystem, Docker
               </p>
             </li>
             <li className="">
-              <p className="hover:text-red-300 hover:underline">
+              <p className="hover:text-red-300  hover:underline m-0">
                 TypeScript, Tailwind CSS, PostgreSQL
               </p>
             </li>
             <li className="">
-              <p className="hover:text-red-300  hover:underline">
+              <p className="hover:text-red-300  hover:underline m-0">
                 AI Tooling: OpenAI, LangChain, Vercel AI SDK
               </p>
             </li>
             <li className=" ">
-              <p className="hover:text-red-300  hover:underline">
+              <p className="hover:text-red-300  hover:underline m-0">
                 Clean Architecture, Testing (Jest, RTL), Agile Development
               </p>
             </li>
             <li className="">
-              <p className=" hover:text-red-300 hover:underline">
+              <p className="hover:text-red-300  hover:underline m-0">
                 Writing, Documentation, and Developer Experience
               </p>
             </li>
             <li className=" ">
-              <p className=" hover:text-red-300  hover:underline">
+              <p className="hover:text-red-300  hover:underline m-0">
                 English (Native), Spanish (Native), French (Professional)
               </p>
             </li>
