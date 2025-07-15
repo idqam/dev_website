@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -30,15 +31,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable}bg-black text-white font-sans`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-black text-white font-sans`}
       >
         <Navbar />
-        <div className="flex justify-center px-4">
-          <div className="w-full max-w-6xl bg-slate-900 min-h-screen mt-24 rounded-xl shadow-md">
-            {" "}
+        <main className="mt-28 px-4 flex justify-center">
+          <div className="w-full max-w-6xl bg-slate-900 min-h-screen rounded-xl shadow-md">
             {children}
           </div>
-        </div>
+        </main>
 
         <Analytics />
       </body>
